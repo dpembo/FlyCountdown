@@ -1,0 +1,138 @@
+# FlyCountdown Configuration
+# Version 2.0.0dp
+
+# ------------------------------------------------------------------------
+# General Settings
+# ------------------------------------------------------------------------
+
+default-flight-time: 300
+prevent-fall-damage: true
+blocked-worlds:
+  - "world_nether"
+  - "world_the_end"
+auto-save-interval: 300
+
+# DO NOT CHANGE - Internal use for update messages
+update-message-sent: false
+
+# ------------------------------------------------------------------------
+# Particle Settings
+# ------------------------------------------------------------------------
+
+particles-enabled: true
+particle-type: "SOUL_FIRE_FLAME"
+particle-amount: 3
+
+# ------------------------------------------------------------------------
+# Action Bar Settings
+# ------------------------------------------------------------------------
+
+actionbar-enabled: true
+
+# Current color of the action bar (Legacy color code format)
+# Changed via /fly settings
+actionbar-color: "&f"
+
+# Supports vanilla color codes (e.g. &f, &a, &c)
+# Placeholders: %time% (00:00 or Inf)
+actionbar-format: "&f%time%"
+
+# ------------------------------------------------------------------------
+# Sound Settings
+# ------------------------------------------------------------------------
+
+sounds-enabled: true
+sound-enabled: "ENTITY_EXPERIENCE_ORB_PICKUP"
+sound-disabled: "BLOCK_NOTE_BLOCK_BASS"
+sound-expired: "ENTITY_VILLAGER_NO"
+sound-warning: "BLOCK_NOTE_BLOCK_PLING"
+sound-purchase: "ENTITY_PLAYER_LEVELUP"
+
+# ------------------------------------------------------------------------
+# Warning Settings
+# ------------------------------------------------------------------------
+
+warning-intervals-percent:
+  - 50
+  - 25
+  - 10
+  - 5
+
+# ------------------------------------------------------------------------
+# Shop Settings (/fly shop)
+# ------------------------------------------------------------------------
+
+shop:
+  enabled: true
+  title: "&8Flight Shop"
+  size: 27
+  background-color: "BLACK"
+  
+  items:
+    option1:
+      slot: 11
+      name: "&b10 Minutes Flight"
+      lore:
+        - "&7Get 10 minutes of flight time"
+        - "&7Cost: &a$1,000"
+        - ""
+        - "&eClick to purchase!"
+      material: FEATHER
+      time-seconds: 600
+      cost: 1000.0
+      
+    option2:
+      slot: 13
+      name: "&b20 Minutes Flight"
+      lore:
+        - "&7Get 20 minutes of flight time"
+        - "&7Cost: &a$1,500"
+        - ""
+        - "&eClick to purchase!"
+      material: ELYTRA
+      time-seconds: 1200
+      cost: 1500.0
+      
+    option3:
+      slot: 15
+      name: "&b1 Hour Flight"
+      lore:
+        - "&7Get 1 hour of flight time"
+        - "&7Cost: &a$3,000"
+        - ""
+        - "&eClick to purchase!"
+      material: BEACON
+      time-seconds: 3600
+      cost: 3000.0
+
+# ------------------------------------------------------------------------
+# Messages (Internal Placeholders: %time%, %player%)
+# ------------------------------------------------------------------------
+
+messages:
+  prefix: "<gradient:#00BFFF:#1E90FF>F</gradient><gradient:#FFD700:#FFA500>C</gradient> <dark_gray>»</dark_gray> "
+  
+  flight-enabled: "<gradient:#00BFFF:#1E90FF>Flight enabled! <white>%time% remaining</white></gradient>"
+  flight-disabled: "<gradient:#FF4500:#FF0000>Flight disabled</gradient>"
+  flight-expired: "<gradient:#FF4500:#FF0000>Your flight time has expired!</gradient>"
+  flight-warning: "<gradient:#FFA500:#FF4500>Warning: %time% remaining</gradient>"
+  no-flight-time: "<gradient:#FF4500:#FF0000>No flight time remaining!</gradient>"
+  flight-blocked-world: "<gradient:#FF4500:#FF0000>Flight is blocked in this world</gradient>"
+  no-permission: "<gradient:#FF4500:#FF0000>You don't have permission</gradient>"
+  player-not-found: "<gradient:#FF4500:#FF0000>Player not found</gradient>"
+  invalid-time-format: "<gradient:#FF4500:#FF0000>Invalid time format!</gradient>"
+  flight-time-added: "<gradient:#00BFFF:#1E90FF>Added %time% to <yellow>%player%</gradient>"
+  flight-time-taken: "<gradient:#FF4500:#FF0000>Removed %time% from <yellow>%player%</gradient>"
+  flight-time-check: "<gradient:#00BFFF:#1E90FF>%player% has %time% remaining</gradient>"
+  config-reloaded: "<gradient:#00BFFF:#1E90FF>Configuration reloaded</gradient>"
+  flight-toggled-on: "<gradient:#00BFFF:#1E90FF>Flight enabled for <yellow>%player%</gradient>"
+  flight-toggled-off: "<gradient:#FF4500:#FF0000>Flight disabled for <yellow>%player%</gradient>"
+  world-blocked: "<gradient:#FF4500:#FF0000>Flight blocked in {world}</gradient>"
+  world-unblocked: "<gradient:#00BFFF:#1E90FF>Flight unblocked in {world}</gradient>"
+  
+  # Shop messages
+  shop-purchase-success: "<gradient:#00BFFF:#1E90FF>Purchase complete! Added %time%.</gradient>"
+  shop-purchase-actionbar: "&bPurchase complete added ( &f%time% &b)"
+  shop-purchase-failed: "<gradient:#FF4500:#FF0000>You don't have enough money!</gradient>"
+  shop-disabled: "<gradient:#FF4500:#FF0000>The flight shop is disabled.</gradient>"
+  vault-missing: "<gradient:#FF4500:#FF0000>Vault is not installed on this server.</gradient>"

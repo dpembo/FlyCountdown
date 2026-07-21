@@ -1,0 +1,34 @@
+name: FlyCountdown
+version: 2.0.0dp
+main: com.flycountdown.FlyCountdown
+api-version: 1.19
+author: drafterplus
+description: Time-limited flight with persistent storage, actionbar, and shop
+softdepend: [PlaceholderAPI, Vault]
+
+commands:
+  fly:
+    description: Manage flight time
+    usage: /<command> [add|take|check|reload|toggle|blockworld|shop|settings] [args...]
+    permission: FlyCountdown.fly
+    permission-message: You don't have permission to use this command!
+
+permissions:
+  FlyCountdown.fly:
+    description: Allows players to use timed flight
+    default: true
+  FlyCountdown.fly.inf:
+    description: Allows unlimited flight time
+    default: op
+  FlyCountdown.admin:
+    description: Provides admin-level flight management
+    default: op
+  FlyCountdown.check:
+    description: Allows checking flight time
+    default: true
+  FlyCountdown.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  FlyCountdown.toggle:
+    description: Allows toggling flight for others
+    default: op

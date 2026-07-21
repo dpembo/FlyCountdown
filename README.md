@@ -1,6 +1,7 @@
 # FlyCountdown 1.2.2
 **Simple, smooth, and powerful flight control for your server.**  
-**Made by _drafterplus_**
+**Made Originaly by _drafterplus_**
+**Extended by pembo**
 
 ---
 

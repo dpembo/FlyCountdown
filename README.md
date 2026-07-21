@@ -44,7 +44,7 @@ This fork is licensed under **CC BY‑NC‑SA 4.0**, with attribution to the ori
 ## 🛒 Flight Shop GUI
 Players can purchase flight time using in‑game currency.
 
-*(Image placeholder)*
+![Shop GUI](images/shopgui.png)
 
 ---
 
@@ -56,7 +56,7 @@ Players can toggle plugin features such as:
 - Particles  
 - Notifications  
 
-*(Image placeholder)*
+![Shop GUI](images/settingsgui.png)
 
 ---
 
